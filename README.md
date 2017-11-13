@@ -24,3 +24,14 @@ npm run build
 ```
 npm install --save-dev file-loader
 ```
+
+## 管理输出
+```
+npm install --save-dev html-webpack-plugin
+npm install clean-webpack-plugin --save-dev
+```
+## 开发
+```
+npm run build
+npm run server
+```
