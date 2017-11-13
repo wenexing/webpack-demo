@@ -21,3 +21,6 @@ npm run build
 ```
 
 ## 管理资源
+```
+npm install --save-dev file-loader
+```
