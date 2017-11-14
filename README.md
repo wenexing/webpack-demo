@@ -17,7 +17,7 @@ webpack src/index.js dist/bundle.js
 
 NPM 脚本(NPM Scripts)
 ```
-npm run build
+npm run build0
 ```
 
 ## 管理资源

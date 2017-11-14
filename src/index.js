@@ -1,17 +1,22 @@
-import { cube } from './math.js';
+import _ from 'lodash';
 
-import './style.css';
-import Icon from '../assets/icon.png';
-import printMe from './print.js';
-
-function component() {
+function component () {
   var element = document.createElement('div');
-  var element = document.createElement('pre');
+  var button = document.createElement('button');
+  var br = document.createElement('br');
 
-  element.innerHTML = [
-    'Hello webpack!',
-    '5 cubed is equal to ' + cube(5)
-  ].join('\n\n');
+  button.innerHTML = 'Click me and look at the console!';
+  element.innerHTML = _.join(['Hello','webpack'], ' ');
+  element.appendChild(br);
+  element.appendChild(button) ;
+
+  // Note that because a network request is involved, some indication
+  // of loading woud need to shown in a production-level site/app.
+  button.onclick = e => import('./print').then(module => {
+  	var print = module.default
+
+  	print();
+  });
 
   return element;
 }
